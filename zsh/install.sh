@@ -10,7 +10,9 @@ if [[ ! -f ./install.sh ]]; then
   exit
 fi
 
-cp -rn ./.oh-my-zsh ~/.oh-my-zsh
+cp -r ./.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-higlighting
+
+cp -r ./.oh-my-zsh/custom/themes/risto-custom.zsh-theme ~/.oh-my-zsh/themes/risto-custom.zsh-theme
 
 cp ~/.zshrc ~/.zshrc-bkp
 
