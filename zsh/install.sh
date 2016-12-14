@@ -16,4 +16,6 @@ cp -r ./.oh-my-zsh/custom/themes/risto-custom.zsh-theme ~/.oh-my-zsh/themes/rist
 
 cp ~/.zshrc ~/.zshrc-bkp
 
-echo "Please edit your zshrc and add plugins zsh-syntax-highlighting and battery, and change ZSH_THEME to risto-custom. Automatic functionality will be added in a later version of this script."
+sed -i '' 's/ZSH_THEME="robbyrussell"/ZSH_THEME="risto-custom"/' ~/.zshrc
+
+echo "Please edit your zshrc and add plugins zsh-syntax-highlighting and battery. Automatic functionality will be added in a later version of this script."
