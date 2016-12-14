@@ -219,6 +219,8 @@ bindsym Ctrl+Mod1+Delete exec systemctl --user start suspend
 bindsym Mod1+Tab focus right
 bindsym Mod1+Shift+Tab focus down
 
+# set compose key
+setxkbmap -option compose:ralt
 
 ##################################################
 # w/o secondary modifier
