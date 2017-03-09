@@ -9,7 +9,7 @@
 
 ## Font for window titles. Will also be used by the bar unless a different font
 ## is used in the bar {} block below.
-font pango: Roboto Condensed, FontAwesome 11
+font pango: San Francisco Text, FontAwesome 10
 
 ## This font is widely installed, provides lots of unicode glyphs, right-to-left
 ## text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -27,33 +27,32 @@ font pango: Roboto Condensed, FontAwesome 11
 # Colors
 ##########
 
-# base16-ocean
+# gruvbox
 
-set $base00 #2B303B
-set $base01 #343D46
-set $base02 #4F5B66
-set $base03 #65737E
-set $base04 #A7ADBA
-set $base05 #C0C5CE
-set $base06 #DFE1E8
-set $base07 #EFF1F5
+set $base00 #2f1e2e
+set $base01 #41323f
+set $base02 #4f424c
+set $base03 #776e71
+set $base04 #8d8687
+set $base05 #a39e9b
+set $base06 #b9b6b0
+set $base07 #e7e9db
 
-set $base08 #BF616A
-set $base09 #D08770
-set $base0A #EBCB8B
-set $base0B #A3BE8C
-set $base0C #96B5B4
-set $base0D #8FA1B3
-set $base0E #B48EAD
-set $base0F #AB7967
-
+set $base08 #ef6155
+set $base09 #f99b15
+set $base0A #fec418
+set $base0B #48b685
+set $base0C #5bc4bf
+set $base0D #06b6ef
+set $base0E #815ba4
+set $base0F #e96ba8
 
 ####################################################################################################
 # Containers
 ##############
 
 ## class						border		bg			text    	indicator	child_border
-client.focused				$base0D 	$base0D 	$base00 	$base01
+client.focused				$base0b 	$base0b 	$base00 	$base01
 client.focused_inactive		$base02 	$base02 	$base03 	$base01
 client.unfocused			$base01 	$base01 	$base03 	$base01
 client.urgent_workspace		$base02 	$base08 	$base07 	$base08
@@ -70,13 +69,13 @@ client.urgent_workspace		$base02 	$base08 	$base07 	$base08
 ## Font Awesome icons:
 ## http://fontawesome.io/cheatsheet
 
-set $ws1 ""
-set $ws2 ""
-set $ws3 ""
-set $ws4 ""
-set $ws5 ""
-set $ws6 ""
-set $ws7 ""
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
 
 # workspace_auto_back_and_forth yes
 
@@ -200,7 +199,7 @@ set $mod Mod4
 ############
 
 set $terminal urxvt
-set $browser chromium
+set $browser /opt/vivaldi/vivaldi
 set $ror $HOME/.config/i3/bin/run-or-raise.sh
 
 
@@ -211,8 +210,7 @@ set $ror $HOME/.config/i3/bin/run-or-raise.sh
 ## Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier Shift
 
-## <WIN>
-bindcode --release 133 exec rofi -show window
+bindsym $mod+s exec rofi -show window
 
 bindsym Ctrl+Mod1+Delete exec systemctl --user start suspend
 
@@ -259,7 +257,7 @@ bindsym $mod+7 workspace $ws7
 
 bindsym $mod+a exec atom
 #bindsym --release $mod+b exec xset dpms force off
-bindsym $mod+c exec chromium
+bindsym $mod+c exec $browser
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+e layout toggle split
 bindsym $mod+f fullscreen toggle
@@ -431,6 +429,10 @@ bindsym XF86AudioRaiseVolume exec amixer -q sset 'Master' 5%+
 bindsym XF86AudioLowerVolume exec amixer -q sset 'Master' 5%-
 bindsym XF86AudioMute exec amixer -q sset Master toggle
 
+## GIGABYTE macro keys - purple = media
+bindsym Alt+Shift+PgUp exec amixer -q sset 'Master' 5%+
+bindsym Alt+Shift+PgDn exec amixer -q sset 'Master' 5%-
+
 ## Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
@@ -440,10 +442,15 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 ## Media player controls
 # bindsym XF86AudioStop
-bindsym --release XF86AudioPlay exec playerctl play-pause
-bindsym --release XF86AudioNext exec playerctl next
-bindsym --release XF86AudioPrev exec playerctl previous
+#bindsym --release XF86AudioPlay exec playerctl play-pause
+#bindsym --release XF86AudioNext exec playerctl next
+#bindsym --release XF86AudioPrev exec playerctl previous
 
+# GIGABYTE Aero 14 does not have media keys. Therefore we use alt+(arrow keys) to control media
+bindsym Mod1+Down  exec playerctl play-pause
+bindsym Mod1+Right exec playerctl next
+bindsym Mod1+Left  exec playerctl previous
+bindsym Mod1+Up    exec playerctl stop
 
 ##################################################
 # Modes
@@ -487,8 +494,8 @@ bindsym button2 kill
 # Borders
 ###########
 
-new_window pixel 0
-new_float pixel 0
+new_window pixel 2
+new_float pixel 3
 
 # hide_edge_borders both
 
@@ -498,22 +505,22 @@ new_float pixel 0
 #########
 
 ## Start i3bar to display a workspace bar (plus the system information i3status finds out, if available)
-bar {
-	position bottom
-	status_command i3blocks
+#bar {
+#	position bottom
+#	status_command i3blocks
 
-	colors {
+#	colors {
 #		colorclass			border		background	text
-		separator			$base02
-		background			$base00
-		statusline			$base05
+#		separator			$base02
+#		background			$base00
+#		statusline			$base05
 
-		focused_workspace	$base0F		$base0F		$base00
-		active_workspace	$base02		$base02		$base07
-		inactive_workspace	$base00		$base00		$base02
-		urgent_workspace	$base0E		$base0E		$base00
-	}
-}
+#		focused_workspace	$base09		$base09		$base00
+#		active_workspace	$base02		$base02		$base07
+#		inactive_workspace	$base00		$base00		$base02
+#		urgent_workspace	$base0E		$base0E		$base00
+#	}
+#}
 
 
 ####################################################################################################
@@ -523,8 +530,8 @@ bar {
 ## Doc:
 ## https://github.com/Airblader/i3
 
- gaps inner 10
- gaps outer 5
+ gaps inner 15
+ gaps outer 15
 
 smart_gaps on
 smart_borders on
@@ -534,9 +541,12 @@ smart_borders on
 # Autostart
 #############
 
-exec xrandr --output DP1 --auto --output HDMI2 --off
+exec xrandr --dpi 160
 exec compton -b
 exec dropbox
-exec nitrogen --restore
+exec feh --bg-fill ~/Dropbox/wallpapers/polyfy/tower-polyfy.png
 exec redshift-gtk
 exec --no-startup-id xss-lock -- /usr/local/bin/i3blur
+#exec /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+exec --no-startup-id indicator-keylock
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
