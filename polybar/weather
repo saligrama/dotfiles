@@ -1,0 +1,42 @@
+#!/usr/bin/env python
+import sys, requests, json, re
+
+f = open('/home/asaligrama/.weather', 'r')
+url = "https://api.darksky.net/forecast/" + f.readline().strip() + "/" + f.readline().strip()
+
+weather_json = requests.get(url)
+weather_json.raise_for_status()
+data = json.loads(weather_json.content.decode())
+
+icon = ""
+iconname = data["currently"]["icon"]
+if (iconname.find("clear-day") > -1):
+    icon = ""
+elif (iconname.find("clear-night") > -1):
+    icon = ""
+elif (iconname.find("snow") > -1):
+    icon = ""
+elif (iconname.find("snow") > -1 or
+      iconname.find("sleet") > -1 or
+      iconname.find("rain") > -1):
+    icon = ""
+elif (iconname.find("cloud") > -1 or
+      iconname.find("wind") > -1 or
+      iconname.find("fog") > -1):
+    icon = ""
+
+temp = data["currently"]["temperature"]
+color = ""
+
+if (temp <= 45.0):
+    color = "#06b6ef"
+elif (temp > 45.0 and temp <= 60.0):
+    color = "#5bc4bf"
+elif (temp > 60.0 and temp <= 70.0):
+    color = "#48b685"
+elif (temp > 70.0 and temp <= 95.0):
+    color = "#f99b15"
+else:
+    color = "#ef6155"
+
+print("%{F" + color + "}" + icon + " " + str(round(temp, 1)) + " °F%{F-}")

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+GMAIL_UNREAD=$(curl -u $(cat ~/.gmail) --silent "https://mail.google.com/mail/feed/atom" | tr -d '\n' | awk -F '<entry>' '{print NF-1}')
+WMAIL_UNREAD=$(curl -u $(cat ~/.wmail) --silent "https://mail.google.com/mail/feed/atom" | tr -d '\n' | awk -F '<entry>' '{print NF-1}')
+
+UNREAD=$(($GMAIL_UNREAD + $WMAIL_UNREAD))
+
+if [ $UNREAD -eq 0 ]; then
+  exit
+fi
+
+echo "%{F#e96ba8}$UNREAD%{F-}"
