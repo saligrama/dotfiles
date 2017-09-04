@@ -1,8 +1,0 @@
-#!/bin/sh
-
-virsh_list=$(virsh -c qemu:///system list | tail -n 2 | head -n 1)
-if [ "$virsh_list" ]; then
-	text=$(echo $virsh_list | awk {'print $2'})
-	echo "$text" # full text
-	echo "$text" # short text
-fi

@@ -1,19 +1,19 @@
 #!/bin/zsh
 # Path to your oh-my-zsh installation.
-  export ZSH=~/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 #source ~/.powerline/powerline/bindings/zsh/powerline.zsh
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="salig"
+ZSH_THEME="salig2"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -50,11 +50,14 @@ ZSH_THEME="salig"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git battery zsh-syntax-highlighting archlinux colored-man-pages systemd thefuck themes zsh_reload tmux web-search colorize)
+plugins=(git zsh-syntax-highlighting colored-man-pages colorize)
 
 # User configuration
 
+# for ArchLinux only
+if [[ $(lsb_release -is) -eq "Arch" ]]; then
   export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+fi
 # export MANPATH="/usr/local/man:$MANPATH"
 
 #ZSH_TMUX_AUTOSTART_ONCE='false'
@@ -62,8 +65,8 @@ plugins=(git battery zsh-syntax-highlighting archlinux colored-man-pages systemd
 
 source $ZSH/oh-my-zsh.sh
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+# fix weird bugs
+export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -90,13 +93,9 @@ export TERM=xterm-256color
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias q="exit"
-alias ff="sudo sh -c 'echo level full-speed > /proc/acpi/ibm/fan'"
-alias fa="sudo sh -c 'echo level auto > /proc/acpi/ibm/fan'"
 
 export EDITOR="nano"
 
 echo "Welcome to `lsb_release -is` `lsb_release -rs`, with `uname -sr`"
 
 echo
-source /usr/share/nvm/init-nvm.sh
-export LC_ALL=en_US.UTF-8

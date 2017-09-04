@@ -1,5 +1,5 @@
 # Modification of fletcherm theme
-PROMPT='%{$fg_bold[cyan]%}%m%{$fg_bold[magenta]%}:%{$fg_bold[green]%}%2~$(git_prompt_info)%{$reset_color%}» '
+PROMPT='%{$fg_bold[cyan]%}%m%{$fg_bold[magenta]%}:%{$fg_bold[red]%}%2~$(git_prompt_info)%{$reset_color%}» '
 RPROMPT='%{$fg_bold[blue]%}%D{%H:%M:%S %Z}%{$reset_color%} $(battery_level_gauge)'
 
 # git theming

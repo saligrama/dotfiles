@@ -1,6 +1,0 @@
-#!/bin/sh
-
-UNREAD=$(curl -u $(cat ~/.wmail) --silent "https://mail.google.com/mail/feed/atom" | tr -d '\n' | awk -F '<entry>' '{print NF-1}')
-
-echo WHS - $UNREAD
-echo WHS - $UNREAD

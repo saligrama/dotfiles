@@ -1,11 +1,11 @@
-[bar/bar1]
+[bar/bottom]
 width = 100%
 height = 40
 clickareas = 35
 monitor = eDP1
 
-background = #002f1e2e
-foreground = #ffe7e9db
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
 
 locale = en_US.UTF-8
 
@@ -13,69 +13,71 @@ bottom = true
 
 tray-position = right
 spacing = 0
-padding-left = 2
 padding-right = 2
 module-margin-left = 0
-module-margin-right = 7
+module-margin-right = 5
 
-font-0 = San Francisco Text:size=18;3
-font-1 = MaterialIcons:size=18;3
+font-0 = Roboto:size=17;3
+font-1 = icomoon:size=18;3
 font-2 = FontAwesome:size=18;3
 
-modules-center = i3
-modules-left = date weather mail spotify
-modules-right = pkg wireless-network temperature xbacklight volume battery
+modules-left = i3
+modules-right = mail pkg temperature wireless-network date
 
-[module/cpu]
-type = internal/cpu
-interval = 2
-format = <label> <bar-load>
-label = 
-label-foreground = #fec418
-label-padding = 0
+[bar/top]
+width = 100%
+height = 40
+clickareas = 35
+monitor = eDP1
 
-bar-load-width = 15
-bar-load-foreground-0 = #48b685
-bar-load-foreground-1 = #48b685
-bar-load-foreground-2 = #fec418
-bar-load-foreground-3 = #ef6155
-bar-load-indicator = |
-bar-load-indicator-foreground = #ff
-bar-load-indicator-font = 3
-bar-load-fill = ─
-bar-load-fill-font = 3
-bar-load-empty = ─
-bar-load-empty-font = 3
-bar-load-empty-foreground = #444444
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
+
+locale = en_US.UTF-8
+
+bottom = false
+
+spacing = 0
+padding-right = 2
+module-margin-left = 0
+module-margin-right = 5
+
+font-0 = Roboto:size=17;3
+font-1 = icomoon:size=18;3
+font-2 = FontAwesome:size=18;3
+font-3 = DejaVu Sans:size=18;3
+
+modules-center = mpd
+modules-left = xbacklight
+modules-right = volume battery
 
 [module/date]
 type = internal/date
 format = <date>
-date = %%{F#5bc4bf}  %a %l:%M %p %%{F-}
-
+date =   %a %l:%M %p
+format-foreground = ${xrdb:color3}
 
 [module/temperature]
 type = internal/temperature
 interval = 10
-thermal-zone = 2
+thermal-zone = 0y
 warn-temperature = 100
 format = <ramp> <label>
 format-warn = <ramp>
 label = %temperature%
 label-warn = %temperature%
-label-warn-foreground = #ef6155
+label-warn-foreground = ${xrdb:color3}
 ramp-0 = 
 ramp-1 = 
-ramp-foreground = #e96ba8
-label-foreground = #e96ba8
-ramp-0-foreground = #e96ba8
+ramp-foreground = ${xrdb:color2}
+label-foreground = ${xrdb:color2}
+ramp-0-foreground = ${xrdb:color2}
 
 
 [module/pkg]
 type = custom/script
 interval = 60
 format = <label>
-format-underline = #ef6155
 label = "%output:0:30%"
 exec = ~/.config/polybar/pkg.sh
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
@@ -83,28 +85,26 @@ exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 [module/battery]
 type = internal/battery
-adapter = AC
+adapter = ADP1
 battery = BAT1
 poll-interval = 5
-format-charging = <animation-charging>  <label-charging>
-format-discharging = <ramp-capacity>  <label-discharging>
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-framerate = 750
+format-charging = <label-charging>  <bar-capacity>
+format-discharging = <label-discharging>  <bar-capacity>
+format-full = <label-full>  <bar-capacity>
 time-format = %H:%M
-label-charging = %percentage%%  (%time%)
-label-discharging = %percentage%%  (%time%)
-label-charging-foreground = #48b685
-animation-charging-foreground = #48b685
-
+label-charging =    %percentage%%  (%time%)
+label-charging-foreground = ${xrdb:color2}
+label-full =  FULL
+label-full-foreground = ${xrdb:color2}
+label-discharging =   %percentage%%  (%time%)
+label-discharging-foreground = ${xrdb:color2}
+bar-capacity-width = 10
+bar-capacity-fill = ─
+bar-capacity-empty = ─
+bar-capacity-indicator = |
+bar-capacity-fill-foreground = ${xrdb:color2}
+bar-capacity-empty-foreground = ${xrdb:foreground}
+bar-capacity-indicator-foreground = ${xrdb:foreground}
 
 [module/i3]
 type = internal/i3
@@ -114,69 +114,57 @@ pin-workspaces = true
 enable-scroll = true
 module-offset-y = 3
 
-ws-icon-default = 
+;ws-icon-0 = 1;
+;ws-icon-1 = 2;
+;ws-icon-2 = 3;
+;ws-icon-3 = 4;
+;ws-icon-4 = 5;
+;ws-icon-5 = 6;
+
+ws-icon-0 = 1;web
+ws-icon-1 = 2;mail
+ws-icon-2 = 3;chat
+ws-icon-3 = 4;code
+ws-icon-4 = 5;docs
+ws-icon-5 = 6;music
 
 label-focused = %icon%
-;label-focused-foreground = #ffffff
-label-focused-foreground = #e7e9db
+label-focused-foreground = ${xrdb:color9}
 
-;label-focused-background = #3f3f3f
-label-focused-background = #002f1e2e
-
-#label-focused-underline = #00FF65
 label-focused-padding = 2
 
-label-unfocused = 
+label-unfocused = %icon%
 label-unfocused-padding = 2
-label-unfocused-foreground = #fbf1c7
-
+label-unfocused-foreground = ${xrdb:foreground}
 
 label-visible = %icon%
-#label-visible-underline = #555555
 label-visible-padding = 4
 
 label-urgent = %icon%
-label-urgent-foreground = #000000
-label-urgent-background = #ef6155
+label-urgent-foreground = ${xrdb:foreground}
+label-urgent-background = ${xrdb:color5}
 label-urgent-padding = 2
-
-[module/memory]
-type = internal/memory
-format = <label> <bar-used>
-label = 
-label-foreground = #fec418
-
-bar-used-width = 15
-bar-used-foreground-0 = #48b685
-bar-used-foreground-1 = #48b685
-bar-used-foreground-2 = #fec418
-bar-used-foreground-3 = #ef6155
-bar-used-indicator = |
-bar-used-indicator-foreground = #ff
-bar-used-indicator-font = 3
-bar-used-fill = ─
-bar-used-fill-font = 3
-bar-used-empty = ─
-bar-used-empty-font = 3
-bar-used-empty-foreground = #444444
 
 [module/volume]
 type = internal/volume
 master_mixer = Pulseaudio
 speaker-mixer =
-#headphone_mixer = Capture
-#headphone_control_numid = 9
 
-format-volume = <ramp-volume> <label-volume>
-label-muted = MUTE
-label-muted-foreground = #689d6a
-label-volume-foreground = #689d6a
-ramp-volume-foreground = #689d6a
+format-volume = <label-volume> <bar-volume>
+format-muted = <label-muted> <bar-volume>
+label-muted =  MUTE
+label-volume = 
+label-muted-foreground = ${xrdb:color5}
+label-volume-foreground = ${xrdb:color5}
 
-ramp-volume-0 =
-ramp-volume-1 =
-ramp-volume-2 =
-ramp-volume-3 =
+bar-volume-empty = ─
+bar-volume-fill = ─
+bar-volume-indicator = |
+bar-volume-width = 10
+bar-volume-fill-foreground = ${xrdb:color5}
+bar-volume-empty-foreground = ${xrdb:foreground}
+bar-volume-indicator-foreground = ${xrdb:foreground}
+
 
 [module/wireless-network]
 type = internal/network
@@ -185,12 +173,10 @@ interval = 3.0
 ping_interval = 10
 
 format-connected = <ramp-signal> <label-connected>
-label-bat = 
 label-connected = %essid%
 label-disconnected = Disconnected
-label-connected-foreground = #5bc4bf
-label-disconnected-foreground = #5bc4bf
-ramp-signal-foreground = #5bc4bf
+label-connected-foreground = ${xrdb:color6}
+label-disconnected-foreground = ${xrdb:color5}
 
 ramp-signal-0 =
 ramp-signal-1 =
@@ -199,20 +185,63 @@ ramp-signal-3 =
 ramp-signal-4 =
 
 animation-packetloss-0 = 
-animation-packetloss-0-foreground = #fec418
+animation-packetloss-0-foreground =
 animation-packetloss-1 =
 animation-packetloss-1-foreground = ${bar/top.foreground}
 animation-packetloss-framerate_ms = 500
 
 [module/xbacklight]
-type = internal/xbacklight
-format = <label>
+type = internal/backlight
+card = intel_backlight
+format = <label>  <bar>
 label =  %percentage%%
+format-foreground = ${xrdb:color12}
+bar-empty = ─
+bar-fill = ─
+bar-indicator = |
+bar-width = 10
+bar-fill-foreground = ${xrdb:color12}
 
 [module/spotify]
 type = custom/script
 exec = ~/.config/polybar/spotify.sh
 poll-interval = 30
+
+[module/cmus]
+type = custom/script
+
+exec = sh ~/.config/polybar/cmus.sh
+exec-if = pgrep -x cmus
+interval = 1
+
+click-left = cmus-remote --pause
+click-right = cmus-remote --stop
+
+[module/mpd]
+type = internal/mpd
+
+host = 127.0.0.1
+port = 6600
+
+format-playing = <toggle> <label-song>  <bar-progress>
+format-paused = <toggle> <label-song>  <bar-progress>
+format-offline =
+
+format-playing-foreground = ${xrdb:color4}
+format-paused-foreground = ${xrdb:color7}
+
+label-song = %artist% - %title%
+
+icon-play = 
+icon-pause = 
+
+bar-progress-width = 45
+bar-progress-indicator = |
+bar-progress-fill = ─
+bar-progress-empty = ─
+bar-progress-fill-foreground = ${xrdb:color4}
+bar-progress-empty-foreground = ${xrdb:foreground}
+bar-progress-indicator-foreground = ${xrdb:foreground}
 
 [module/weather]
 type = custom/script
@@ -225,7 +254,5 @@ type = custom/script
 interval = 10
 format = <label>
 format-prefix = "  "
-format-prefix-foreground = #e96ba8
+format-prefix-foreground = ${xrdb:color3}
 exec = ~/.config/polybar/mail 2> /dev/null
-
-; vim:ft=dosini

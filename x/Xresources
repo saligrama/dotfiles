@@ -1,56 +1,54 @@
 ! special
-*.foreground:   #a39e9b
-*.background:   #2f1e2e
-*.cursorColor:  #a39e9b
+*.foreground:   #eceff1
+*.background:   #263238
+*.cursorColor:  #eceff1
 
 ! black
-*.color0:       #2f1e2e
-*.color8:       #776e71
+*.color0:       #263238
+*.color8:       #37474f
 
 ! red
-*.color1:       #ef6155
-*.color9:       #ef6155
+*.color1:       #ff9800
+*.color9:       #ffa74d
 
 ! green
-*.color2:       #48b685
-*.color10:      #48b685
+*.color2:       #8bc34a
+*.color10:      #9ccc65
 
 ! yellow
-*.color3:       #fec418
-*.color11:      #fec418
+*.color3:       #ffc107
+*.color11:      #ffa000
 
 ! blue
-*.color4:       #06b6ef
-*.color12:      #06b6ef
+*.color4:       #03a9f4
+*.color12:      #81d4fa
 
 ! magenta
-*.color5:       #815ba4
-*.color13:      #815ba4
+*.color5:       #e91e63
+*.color13:      #ad1457
 
 ! cyan
-*.color6:       #5bc4bf
-*.color14:      #5bc4bf
+*.color6:       #009688
+*.color14:      #26a69a
 
 ! white
-*.color7:       #a39e9b
-*.color15:      #e7e9db
+*.color7:       #cfd8dc
+*.color15:      #eceff1
 
 URxvt.scrollBar: false
-URxvt.font: xft:SF Mono:size=9
+URxvt.font: xft:Mononoki Nerd Font:size=9
 URxvt.letterSpace: -1
 
 ! Rofi
 rofi.color-enabled: true
-rofi.color-window: #2f1e2e, #2f1e2e, #2f1e2e
-rofi.color-normal: argb:02f1e2e, #e7e9db, argb:02f1e2e, #48b685, #e7e9db
-rofi.color-active: argb:d02f1e2e, #48b685, argb:cf2f1e2e, #48b685, argb:cb2f1e2e
-rofi.color-urgent: argb:c62f1e2e, #ef6155, argb:c92f1e2e, #ef6155, argb:ce2f1e2e
-rofi.font:         San Francisco Text 13
+rofi.color-window: #263238, #263238, #263238
+rofi.color-normal: argb:0263238, #eceff1, argb:0263238, #009688, #eceff1
+rofi.color-active: argb:d0263238, #009688, argb:cf263238, #009688, argb:cb263238
+rofi.color-urgent: argb:c6263238, #ad1457, argb:c9263238, #ad1457, argb:ce263238
+rofi.font:         Roboto 13
 rofi.fullscreen:   false
 !rofi.opacity:     85%
 rofi.dpi:	         160
 rofi.lines:        10
-rofi.columns:      1
 
-! HiDPI
-Xft.dpi : 160
+Xft.dpi: 160

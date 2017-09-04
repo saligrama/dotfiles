@@ -9,4 +9,4 @@ if [ $UNREAD -eq 0 ]; then
   exit
 fi
 
-echo "%{F#e96ba8}$UNREAD%{F-}"
+echo "%{F#ffc107}$UNREAD%{F-}"

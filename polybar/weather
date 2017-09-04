@@ -29,14 +29,14 @@ temp = data["currently"]["temperature"]
 color = ""
 
 if (temp <= 45.0):
-    color = "#06b6ef"
+    color = "#458588"
 elif (temp > 45.0 and temp <= 60.0):
-    color = "#5bc4bf"
+    color = "#689d6a"
 elif (temp > 60.0 and temp <= 70.0):
-    color = "#48b685"
+    color = "#98971a"
 elif (temp > 70.0 and temp <= 95.0):
-    color = "#f99b15"
+    color = "#d79921"
 else:
-    color = "#ef6155"
+    color = "#cc241d"
 
 print("%{F" + color + "}" + icon + " " + str(round(temp, 1)) + " °F%{F-}")

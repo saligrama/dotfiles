@@ -1,4 +1,0 @@
-#!/bin/sh
-
-echo -ne "\xFE\xFF" | iconv -f utf-16be
-echo -ne "\xFE\xFF" | iconv -f utf-16be
