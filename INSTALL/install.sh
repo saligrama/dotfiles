@@ -6,7 +6,7 @@ CONFIG_DIR="~/.config"
 
 CP="/bin/cp -rv"
 SH="/bin/sh"
-MKDIR="/bin/mkdir -rp"
+MKDIR="/bin/mkdir -vp"
 
 ROOTCP="/bin/sudo /bin/cp -v"
 ROOTMKDIR="/bin/sudo /bin/mkdir -p"
