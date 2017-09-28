@@ -6,7 +6,8 @@ WMAIL_UNREAD=$(curl -u $(cat ~/.wmail) --silent "https://mail.google.com/mail/fe
 UNREAD=$(($GMAIL_UNREAD + $WMAIL_UNREAD))
 
 if [ $UNREAD -eq 0 ]; then
+  echo ""
   exit
+else
+  echo "%{F#ddb26f}  $UNREAD%{F-}"
 fi
-
-echo "%{F#ffc107}$UNREAD%{F-}"

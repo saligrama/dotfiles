@@ -17,7 +17,7 @@ padding-right = 2
 module-margin-left = 0
 module-margin-right = 5
 
-font-0 = Roboto:size=17;3
+font-0 = Droid Sans:size=17;3
 font-1 = icomoon:size=18;3
 font-2 = FontAwesome:size=18;3
 
@@ -42,7 +42,7 @@ padding-right = 2
 module-margin-left = 0
 module-margin-right = 5
 
-font-0 = Roboto:size=17;3
+font-0 = Droid Sans:size=17;3
 font-1 = icomoon:size=18;3
 font-2 = FontAwesome:size=18;3
 font-3 = DejaVu Sans:size=18;3
@@ -227,8 +227,8 @@ format-playing = <toggle> <label-song>  <bar-progress>
 format-paused = <toggle> <label-song>  <bar-progress>
 format-offline =
 
-format-playing-foreground = ${xrdb:color4}
-format-paused-foreground = ${xrdb:color7}
+format-playing-foreground = ${xrdb:color6}
+format-paused-foreground = ${xrdb:foreground}
 
 label-song = %artist% - %title%
 
@@ -239,7 +239,7 @@ bar-progress-width = 45
 bar-progress-indicator = |
 bar-progress-fill = ─
 bar-progress-empty = ─
-bar-progress-fill-foreground = ${xrdb:color4}
+bar-progress-fill-foreground = ${xrdb:color6}
 bar-progress-empty-foreground = ${xrdb:foreground}
 bar-progress-indicator-foreground = ${xrdb:foreground}
 
@@ -253,6 +253,4 @@ exec = ~/.config/polybar/weather 2> /dev/null
 type = custom/script
 interval = 10
 format = <label>
-format-prefix = "  "
-format-prefix-foreground = ${xrdb:color3}
 exec = ~/.config/polybar/mail 2> /dev/null

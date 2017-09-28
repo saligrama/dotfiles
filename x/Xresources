@@ -1,51 +1,51 @@
 ! special
-*.foreground:   #eceff1
-*.background:   #263238
-*.cursorColor:  #eceff1
+*.foreground:   #d0d0d0
+*.background:   #151515
+*.cursorColor:  #d0d0d0
 
 ! black
-*.color0:       #263238
-*.color8:       #37474f
+*.color0:       #151515
+*.color8:       #505050
 
 ! red
-*.color1:       #ff9800
-*.color9:       #ffa74d
+*.color1:       #fb9fb1
+*.color9:       #eda987
 
 ! green
-*.color2:       #8bc34a
-*.color10:      #9ccc65
+*.color2:       #acc267
+*.color10:      #acc267
 
 ! yellow
-*.color3:       #ffc107
-*.color11:      #ffa000
+*.color3:       #ddb26f
+*.color11:      #ddb26f
 
 ! blue
-*.color4:       #03a9f4
-*.color12:      #81d4fa
+*.color4:       #6fc2ef
+*.color12:      #b0b0b0
 
 ! magenta
-*.color5:       #e91e63
-*.color13:      #ad1457
+*.color5:       #e1a3ee
+*.color13:      #e0e0e0
 
 ! cyan
-*.color6:       #009688
-*.color14:      #26a69a
+*.color6:       #12cfc0
+*.color14:      #deaf8f
 
 ! white
-*.color7:       #cfd8dc
-*.color15:      #eceff1
+*.color7:       #d0d0d0
+*.color15:      #f5f5f5
 
 URxvt.scrollBar: false
-URxvt.font: xft:Mononoki Nerd Font:size=9
+URxvt.font: xft:Droid Sans Mono Slashed:size=9
 URxvt.letterSpace: -1
 
 ! Rofi
 rofi.color-enabled: true
-rofi.color-window: #263238, #263238, #263238
-rofi.color-normal: argb:0263238, #eceff1, argb:0263238, #009688, #eceff1
-rofi.color-active: argb:d0263238, #009688, argb:cf263238, #009688, argb:cb263238
-rofi.color-urgent: argb:c6263238, #ad1457, argb:c9263238, #ad1457, argb:ce263238
-rofi.font:         Roboto 13
+rofi.color-window: #151515, #151515, #151515
+rofi.color-normal: argb:0151515, #d0d0d0, argb:0151515, #12cfc0, #d0d0d0
+rofi.color-active: argb:d0151515, #12cfc0, argb:cf151515, #12cfc0, argb:cb151515
+rofi.color-urgent: argb:c6151515, #e1a3ee, argb:c9151515, #e1a3ee, argb:ce151515
+rofi.font:         Droid Sans 13
 rofi.fullscreen:   false
 !rofi.opacity:     85%
 rofi.dpi:	         160
