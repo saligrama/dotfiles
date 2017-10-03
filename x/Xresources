@@ -1,51 +1,51 @@
 ! special
-*.foreground:   #d0d0d0
-*.background:   #151515
-*.cursorColor:  #d0d0d0
+*.foreground:   #d8dee9
+*.background:   #2e3440
+*.cursorColor:  #d8dee9
 
 ! black
-*.color0:       #151515
-*.color8:       #505050
+*.color0:       #3b4252
+*.color8:       #4c566a
 
 ! red
-*.color1:       #fb9fb1
-*.color9:       #eda987
+*.color1:       #bf616a
+*.color9:       #bf616a
 
 ! green
-*.color2:       #acc267
-*.color10:      #acc267
+*.color2:       #a3be8c
+*.color10:      #a3be8c
 
 ! yellow
-*.color3:       #ddb26f
-*.color11:      #ddb26f
+*.color3:       #ebcb8b
+*.color11:      #ebcb8b
 
 ! blue
-*.color4:       #6fc2ef
-*.color12:      #b0b0b0
+*.color4:       #81a1c1
+*.color12:      #81a1c1
 
 ! magenta
-*.color5:       #e1a3ee
-*.color13:      #e0e0e0
+*.color5:       #b48ead
+*.color13:      #b48ead
 
 ! cyan
-*.color6:       #12cfc0
-*.color14:      #deaf8f
+*.color6:       #88c0d0
+*.color14:      #8fbcbb
 
 ! white
-*.color7:       #d0d0d0
-*.color15:      #f5f5f5
+*.color7:       #e5e9f0
+*.color15:      #eceff4
 
 URxvt.scrollBar: false
-URxvt.font: xft:Droid Sans Mono Slashed:size=9
-URxvt.letterSpace: -1
+URxvt.font: xft:Input Mono Narrow:size=9
+!URxvt.letterSpace: -1
 
 ! Rofi
 rofi.color-enabled: true
-rofi.color-window: #151515, #151515, #151515
-rofi.color-normal: argb:0151515, #d0d0d0, argb:0151515, #12cfc0, #d0d0d0
-rofi.color-active: argb:d0151515, #12cfc0, argb:cf151515, #12cfc0, argb:cb151515
-rofi.color-urgent: argb:c6151515, #e1a3ee, argb:c9151515, #e1a3ee, argb:ce151515
-rofi.font:         Droid Sans 13
+rofi.color-window: #2E3440, #2E3440, #2E3440
+rofi.color-normal: argb:02E3440, #eceff4, argb:02E3440, #81a1c1, #eceff4
+rofi.color-active: argb:d02E3440, #81a1c1, argb:cf2E3440, #81a1c1, argb:cb2E3440
+rofi.color-urgent: argb:c62E3440, #b48ead, argb:c92E3440, #b48ead, argb:ce2E3440
+rofi.font:         San Francisco Text 13
 rofi.fullscreen:   false
 !rofi.opacity:     85%
 rofi.dpi:	         160

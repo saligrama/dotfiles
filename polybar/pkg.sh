@@ -4,7 +4,7 @@ aur=$(cower -u | wc -l)
 
 check=$((pac + aur))
 if [[ "$check" != "0" ]]; then
-    echo "$pac %{F#d33682}%{F-} $aur"
+    echo "$pac %{F#b48ead}%{F-} $aur"
 else
     echo ""
     exit
