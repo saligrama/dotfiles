@@ -27,14 +27,14 @@ font pango: San Francisco Text, FontAwesome 10
 # Colors
 ##########
 
-set_from_resource $base00 color0
+set_from_resource $base00 background
 set_from_resource $base01 color1
 set_from_resource $base02 color2
 set_from_resource $base03 color3
 set_from_resource $base04 color4
 set_from_resource $base05 color5
 set_from_resource $base06 color6
-set_from_resource $base07 color7
+set_from_resource $base07 foreground
 
 set_from_resource $base08 color8
 set_from_resource $base09 color9
@@ -191,7 +191,7 @@ set $mod Mod4
 ############
 
 set $terminal urxvt
-set $browser /opt/waterfox/waterfox
+set $browser /usr/bin/chromium
 set $ror $HOME/.config/i3/bin/run-or-raise.sh
 
 
@@ -522,12 +522,11 @@ new_float pixel 3
 ## Doc:
 ## https://github.com/Airblader/i3
 
- gaps inner 15
- gaps outer 15
+gaps inner 15
+gaps outer 15
 
 smart_gaps on
 smart_borders on
-
 
 ####################################################################################################
 # Autostart
@@ -536,7 +535,7 @@ smart_borders on
 exec xrandr --dpi 160
 exec compton -b
 exec dropbox
-exec feh --bg-fill ~/Dropbox/wallpapers/loophole-positrondream.png
+exec feh --bg-fill ~/Dropbox/wallpapers/torrid-positrondream.png
 exec redshift-gtk
 exec --no-startup-id xss-lock -- /usr/local/bin/i3blur
 #exec /usr/lib/gnome-settings-daemon/gnome-settings-daemon

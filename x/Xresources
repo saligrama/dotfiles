@@ -1,54 +1,58 @@
 ! special
-*.foreground:   #d8dee9
-*.background:   #2e3440
-*.cursorColor:  #d8dee9
+*.foreground:   #f8f8f2
+*.background:   #282a36
+*.cursorColor:  #f8f8f2
 
 ! black
-*.color0:       #3b4252
-*.color8:       #4c566a
+*.color0:       #000000
+*.color8:       #4d4d4d
 
 ! red
-*.color1:       #bf616a
-*.color9:       #bf616a
+*.color1:       #ff5555
+*.color9:       #ff6e67
 
 ! green
-*.color2:       #a3be8c
-*.color10:      #a3be8c
+*.color2:       #50fa7b
+*.color10:      #5af78e
 
 ! yellow
-*.color3:       #ebcb8b
-*.color11:      #ebcb8b
+*.color3:       #f1fa8c
+*.color11:      #f4f99d
 
 ! blue
-*.color4:       #81a1c1
-*.color12:      #81a1c1
+*.color4:       #bd93f9
+*.color12:      #caa9fa
 
 ! magenta
-*.color5:       #b48ead
-*.color13:      #b48ead
+*.color5:       #ff79c6
+*.color13:      #ff92d0
 
 ! cyan
-*.color6:       #88c0d0
-*.color14:      #8fbcbb
+*.color6:       #8be9fd
+*.color14:      #9aedfe
 
 ! white
-*.color7:       #e5e9f0
-*.color15:      #eceff4
+*.color7:       #bfbfbf
+*.color15:      #e6e6e6
 
 URxvt.scrollBar: false
-URxvt.font: xft:Input Mono Narrow:size=9
-!URxvt.letterSpace: -1
+URxvt.font: xft:SF Mono:size=9
+URxvt.letterSpace: 0
+URxvt.internalBorder: 10
 
 ! Rofi
 rofi.color-enabled: true
-rofi.color-window: #2E3440, #2E3440, #2E3440
-rofi.color-normal: argb:02E3440, #eceff4, argb:02E3440, #81a1c1, #eceff4
-rofi.color-active: argb:d02E3440, #81a1c1, argb:cf2E3440, #81a1c1, argb:cb2E3440
-rofi.color-urgent: argb:c62E3440, #b48ead, argb:c92E3440, #b48ead, argb:ce2E3440
-rofi.font:         San Francisco Text 13
+rofi.color-window: #282a36, #8be9fd, #282a36
+rofi.color-normal: argb:d0282a36, #bfbfbf, argb:d0282a36, #8be9fd, #282a36
+rofi.color-active: argb:d0282a36, #8be9fd, argb:cf282a36, #8be9fd, argb:cb282a36
+rofi.color-urgent: argb:c6282a36, #8be9fd, argb:c9282a36, #8be9fd, argb:ce282a36
+rofi.font:         SF Mono 13
 rofi.fullscreen:   false
+rofi.padding:      15
 !rofi.opacity:     85%
 rofi.dpi:	         160
 rofi.lines:        10
+rofi.bw:           3
+rofi.hide-scrollbar: true
 
 Xft.dpi: 160

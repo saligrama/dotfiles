@@ -9,5 +9,5 @@ if [ $UNREAD -eq 0 ]; then
   echo ""
   exit
 else
-  echo "%{F#ebcb8b}  $UNREAD%{F-}"
+  echo "%{F#b58900}  $UNREAD%{F-}"
 fi

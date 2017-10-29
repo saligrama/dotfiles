@@ -1,30 +1,4 @@
-[bar/bottom]
-width = 100%
-height = 40
-clickareas = 35
-monitor = eDP1
-
-background = ${xrdb:background}
-foreground = ${xrdb:foreground}
-
-locale = en_US.UTF-8
-
-bottom = true
-
-tray-position = right
-spacing = 0
-padding-right = 2
-module-margin-left = 0
-module-margin-right = 5
-
-font-0 = San Francisco Text:size=17;3
-font-1 = icomoon:size=18;3
-font-2 = FontAwesome:size=18;3
-
-modules-left = i3
-modules-right = mail pkg temperature wireless-network date
-
-[bar/top]
+[bar/bar]
 width = 100%
 height = 40
 clickareas = 35
@@ -38,41 +12,36 @@ locale = en_US.UTF-8
 bottom = false
 
 spacing = 0
-padding-right = 2
+padding-right = 1
 module-margin-left = 0
-module-margin-right = 5
+module-margin-right = 2
 
-font-0 = San Francisco Text:size=17;3
-font-1 = icomoon:size=18;3
-font-2 = FontAwesome:size=18;3
-font-3 = DejaVu Sans:size=18;3
+font-0 = SF Mono:size=15;3
+font-1 = icomoon:size=17;3
+font-2 = FontAwesome:size=16;3
+font-3 = DejaVu Sans:size=16;3
 
 modules-center = mpd
-modules-left = xbacklight
-modules-right = volume battery
+modules-right = wireless-network volume battery date
+modules-left = i3
 
 [module/date]
 type = internal/date
 format = <date>
-date =   %a %l:%M %p
-format-foreground = ${xrdb:color3}
+date = %a %l:%M %p
+format-prefix-foreground = ${xrdb:color3}
+format-prefix = 
+format-prefix-padding = 1
 
 [module/temperature]
 type = internal/temperature
 interval = 10
 thermal-zone = 0y
-warn-temperature = 100
-format = <ramp> <label>
-format-warn = <ramp>
+format = <label>
 label = %temperature%
-label-warn = %temperature%
-label-warn-foreground = ${xrdb:color3}
-ramp-0 = 
-ramp-1 = 
-ramp-foreground = ${xrdb:color2}
-label-foreground = ${xrdb:color2}
-ramp-0-foreground = ${xrdb:color2}
-
+format-prefix = TEMP
+format-prefix-foreground = ${xrdb:color1}
+format-prefix-padding = 1
 
 [module/pkg]
 type = custom/script
@@ -88,23 +57,23 @@ type = internal/battery
 adapter = ADP1
 battery = BAT1
 poll-interval = 5
-format-charging = <label-charging>  <bar-capacity>
-format-discharging = <label-discharging>  <bar-capacity>
-format-full = <label-full>  <bar-capacity>
+format-charging = <label-charging>
+format-discharging = <label-discharging>
+format-full = <label-full>
 time-format = %H:%M
-label-charging =    %percentage%%  (%time%)
-label-charging-foreground = ${xrdb:color2}
-label-full =  FULL
-label-full-foreground = ${xrdb:color2}
-label-discharging =   %percentage%%  (%time%)
-label-discharging-foreground = ${xrdb:color2}
-bar-capacity-width = 10
-bar-capacity-fill = ─
-bar-capacity-empty = ─
-bar-capacity-indicator = |
-bar-capacity-fill-foreground = ${xrdb:color2}
-bar-capacity-empty-foreground = ${xrdb:foreground}
-bar-capacity-indicator-foreground = ${xrdb:foreground}
+label-charging = %percentage%%
+format-charging-prefix =  
+format-charging-prefix-padding = 1
+format-charging-prefix-foreground = ${xrdb:color2}
+label-full = FULL
+format-full-prefix = 
+format-full-prefix-padding = 1
+format-full-prefix-foreground = ${xrdb:color2}
+full-at = 96
+label-discharging = %percentage%%  (%time%)
+format-discharging-prefix = 
+format-discharging-prefix-foreground = ${xrdb:color9}
+format-discharging-prefix-padding = 1
 
 [module/i3]
 type = internal/i3
@@ -121,50 +90,39 @@ module-offset-y = 3
 ;ws-icon-4 = 5;
 ;ws-icon-5 = 6;
 
-ws-icon-0 = 1;web
-ws-icon-1 = 2;mail
-ws-icon-2 = 3;chat
-ws-icon-3 = 4;code
-ws-icon-4 = 5;docs
-ws-icon-5 = 6;music
+ws-icon-default = 
 
 label-focused = %icon%
 label-focused-foreground = ${xrdb:color9}
 
-label-focused-padding = 2
+label-focused-padding = 1
 
-label-unfocused = %icon%
-label-unfocused-padding = 2
+label-unfocused = 
+label-unfocused-padding = 1
 label-unfocused-foreground = ${xrdb:foreground}
 
 label-visible = %icon%
 label-visible-padding = 4
 
 label-urgent = %icon%
-label-urgent-foreground = ${xrdb:foreground}
-label-urgent-background = ${xrdb:color5}
-label-urgent-padding = 2
+label-urgent-foreground = ${xrdb:color5}
+label-urgent-padding = 1
 
 [module/volume]
 type = internal/volume
 master_mixer = Pulseaudio
 speaker-mixer =
 
-format-volume = <label-volume> <bar-volume>
-format-muted = <label-muted> <bar-volume>
-label-muted =  MUTE
-label-volume = 
-label-muted-foreground = ${xrdb:color5}
-label-volume-foreground = ${xrdb:color5}
-
-bar-volume-empty = ─
-bar-volume-fill = ─
-bar-volume-indicator = |
-bar-volume-width = 10
-bar-volume-fill-foreground = ${xrdb:color5}
-bar-volume-empty-foreground = ${xrdb:foreground}
-bar-volume-indicator-foreground = ${xrdb:foreground}
-
+format-volume = <label-volume>
+format-muted = <label-muted>
+format-muted-prefix = 
+format-volume-prefix = 
+format-muted-prefix-padding = 1
+format-volume-prefix-padding = 1
+label-muted = %percentage%%
+label-volume = %percentage%%
+format-muted-prefix-foreground = ${xrdb:color5}
+format-volume-prefix-foreground = ${xrdb:color5}
 
 [module/wireless-network]
 type = internal/network
@@ -172,82 +130,29 @@ interface = wlp3s0
 interval = 3.0
 ping_interval = 10
 
-format-connected = <ramp-signal> <label-connected>
-label-connected = %essid%
-label-disconnected = Disconnected
-label-connected-foreground = ${xrdb:color6}
-label-disconnected-foreground = ${xrdb:color5}
-
-ramp-signal-0 =
-ramp-signal-1 =
-ramp-signal-2 =
-ramp-signal-3 =
-ramp-signal-4 =
-
-animation-packetloss-0 = 
-animation-packetloss-0-foreground =
-animation-packetloss-1 =
-animation-packetloss-1-foreground = ${bar/top.foreground}
-animation-packetloss-framerate_ms = 500
+format-connected = <label-connected>
+label-connected = %essid%
+label-disconnected = Disconnected
+format-connected-prefix = 
+format-disconnected-prefix = 
+format-connected-prefix-padding = 1
+format-disconnected-prefix-padding = 1
+format-connected-prefix-foreground = ${xrdb:color6}
+format-disconnected-prefix-foreground = ${xrdb:color5}
 
 [module/xbacklight]
 type = internal/backlight
 card = intel_backlight
-format = <label>  <bar>
-label =  %percentage%%
-format-foreground = ${xrdb:color12}
-bar-empty = ─
-bar-fill = ─
-bar-indicator = |
-bar-width = 10
-bar-fill-foreground = ${xrdb:color12}
-
-[module/spotify]
-type = custom/script
-exec = ~/.config/polybar/spotify.sh
-poll-interval = 30
-
-[module/cmus]
-type = custom/script
-
-exec = sh ~/.config/polybar/cmus.sh
-exec-if = pgrep -x cmus
-interval = 1
-
-click-left = cmus-remote --pause
-click-right = cmus-remote --stop
+format = <label>
+label =  %percentage%%
+format-prefix = BRT
+format-prefix-padding = 1
+format-prefix-foreground = ${xrdb:color12}
 
 [module/mpd]
-type = internal/mpd
-
-host = 127.0.0.1
-port = 6600
-
-format-playing = <toggle> <label-song>  <bar-progress>
-format-paused = <toggle> <label-song>  <bar-progress>
-format-offline =
-
-format-playing-foreground = ${xrdb:color6}
-format-paused-foreground = ${xrdb:foreground}
-
-label-song = %artist% - %title%
-
-icon-play = 
-icon-pause = 
-
-bar-progress-width = 45
-bar-progress-indicator = |
-bar-progress-fill = ─
-bar-progress-empty = ─
-bar-progress-fill-foreground = ${xrdb:color6}
-bar-progress-empty-foreground = ${xrdb:foreground}
-bar-progress-indicator-foreground = ${xrdb:foreground}
-
-[module/weather]
 type = custom/script
-interval = 900
-format = <label>
-exec = ~/.config/polybar/weather 2> /dev/null
+exec = ~/.config/polybar/mpd.sh
+interval = 1
 
 [module/mail]
 type = custom/script
