@@ -1,2 +1,2 @@
 #!/bin/bash
-/usr/local/bin/lock -l dimblur
+/usr/local/bin/lock -l dim
