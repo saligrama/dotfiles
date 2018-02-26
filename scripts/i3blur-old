@@ -1,0 +1,5 @@
+#!/bin/bash
+scrot '/tmp/scrot.png' -e 'convert -blur 0x8 $f /tmp/lockbg.png'
+convert -gravity center -composite /tmp/lockbg.png /usr/local/img/lock.png /tmp/lockfinal.png
+i3lock -i /tmp/lockfinal.png
+rm /tmp/lockfinal.png /tmp/lockbg.png /tmp/scrot.png
