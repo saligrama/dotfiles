@@ -1,5 +1,5 @@
 [global]
-    font = "Iosevka"
+    font = "Fira Code"
     allow_markup = yes
     format = "<b>%s %p</b>\n%b"
     sort = yes

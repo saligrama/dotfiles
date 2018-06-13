@@ -9,7 +9,7 @@
 
 ## Font for window titles. Will also be used by the bar unless a different font
 ## is used in the bar {} block below.
-font pango: Roboto 10
+font pango: Fira Sans Book 10
 
 ## This font is widely installed, provides lots of unicode glyphs, right-to-left
 ## text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -46,7 +46,7 @@ set_from_resource $base0E color14
 set_from_resource $base0F color15
 
 # wallpaper
-set $wall /home/asaligrama/Dropbox/wallpapers/skyscraper-positrondream.png
+set $wall /home/asaligrama/Dropbox/wallpapers/hochiminh-unsplash.jpg
 
 ####################################################################################################
 # Containers
@@ -54,7 +54,7 @@ set $wall /home/asaligrama/Dropbox/wallpapers/skyscraper-positrondream.png
 
 ## class						border		bg			text    	indicator	child_border
 client.focused				$base00 	$base04 	$base00 	$base00
-client.focused_inactive		$base06 	$base04 	$base03 	$base00
+client.focused_inactive		$base06 	$base06 	$base03 	$base00
 client.unfocused			$base00 	$base00 	$base07 	$base00
 client.urgent_workspace		$base06 	$base08 	$base07 	$base08
 #client.placeholder
@@ -107,7 +107,7 @@ assign [instance="^m.facebook.com__messages$"] $ws3
 assign [instance="^Photoshop.exe$"] $ws6
 
 ## class
-assign [class="urxvt"] $ws2
+# assign [class="urxvt"] $ws2
 # assign [class="Nautilus"] $ws1
 
 assign [class="^chromium$"] $ws1
@@ -193,7 +193,7 @@ set $mod Mod4
 # Commands
 ############
 
-set $terminal urxvt
+set $terminal kitty
 set $browser /usr/bin/chromium
 set $ror $HOME/.config/i3/bin/run-or-raise.sh
 
@@ -234,7 +234,7 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+F12 fullscreen toggle
 # bindsym $mod+F12
 
-bindsym Print exec gnome-screenshot --interactive
+bindsym --release Print exec scrot
 # bindszm Scroll)Lock
 bindsym Pause scratchpad show
 
@@ -525,8 +525,8 @@ new_float pixel 3
 ## Doc:
 ## https://github.com/Airblader/i3
 
-gaps inner 15
-gaps outer 15
+gaps inner 5
+gaps outer 5
 
 smart_gaps on
 smart_borders on
