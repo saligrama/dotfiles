@@ -22,8 +22,8 @@ font-2 = ionicons:size=18;3
 font-3 = FontAwesome:size=16;3
 font-4 = DejaVu Sans:size=16;3
 
-modules-center = mpd
-modules-right = wireless-network volume battery date
+modules-center = spotify
+modules-right = wireless-network pulseaudio battery date
 modules-left = i3
 
 [module/date]
@@ -109,10 +109,9 @@ label-urgent = %icon%
 label-urgent-foreground = ${xrdb:color5}
 label-urgent-padding = 1
 
-[module/volume]
-type = internal/alsa
-master_mixer = Pulseaudio
-speaker-mixer =
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = bluez_sink.00_E0_4C_C8_37_91.a2dp_sink
 
 format-volume = <label-volume>
 format-muted = <label-muted>
@@ -150,9 +149,9 @@ format-prefix = BRT
 format-prefix-padding = 1
 format-prefix-foreground = ${xrdb:color12}
 
-[module/mpd]
+[module/spotify]
 type = custom/script
-exec = ~/.config/polybar/mpd.sh
+exec = ~/.config/polybar/spotify.sh
 interval = 1
 
 [module/mail]

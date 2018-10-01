@@ -5,14 +5,14 @@
 
 player_status=$(playerctl status 2> /dev/null)
 if [[ $? -eq 0 ]]; then
-    metadata="$(playerctl metadata artist) - $(playerctl metadata title)"
+    metadata="$(playerctl metadata title) - $(playerctl metadata artist)"
 fi
 
 # Foreground color formatting tags are optional
 if [[ $player_status = "Playing" ]]; then
-    echo "%{F#c795ae} $metadata"       # blue when playing
+    echo "%{F#83a598} $metadata"       # blue when playing
 elif [[ $player_status = "Paused" ]]; then
-    echo "%{F#c7ccd1} $metadata"       # Greyed out info when paused
+    echo " $metadata"       # Greyed out info when paused
 else
     echo ""
 fi

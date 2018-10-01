@@ -1,6 +1,6 @@
 #!/bin/bash
 music_percent() {
-    comp_col="#61afef" # stores the colour of the % complete text
+    comp_col="#83a598" # stores the colour of the % complete text
 
     # current song in format "title - artist" if tagged, if not use filename
     songstr=$(mpc current -f '[%title% - %artist%|%file%] ')

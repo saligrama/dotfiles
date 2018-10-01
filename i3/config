@@ -9,7 +9,7 @@
 
 ## Font for window titles. Will also be used by the bar unless a different font
 ## is used in the bar {} block below.
-font pango: Fira Sans Book 10
+font pango: Fira Sans 11
 
 ## This font is widely installed, provides lots of unicode glyphs, right-to-left
 ## text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -46,7 +46,7 @@ set_from_resource $base0E color14
 set_from_resource $base0F color15
 
 # wallpaper
-set $wall /home/asaligrama/Dropbox/wallpapers/hochiminh-unsplash.jpg
+set $wall /home/asaligrama/Dropbox/wallpapers/two-islands-unsplash.jpg
 
 ####################################################################################################
 # Containers
@@ -430,21 +430,21 @@ bindsym XF86MonBrightnessDown exec sudo xbacklight -dec 10
 # bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
 ## Media player controls
-bindsym --release XF86AudioStop exec mpc stop
-bindsym --release XF86AudioPlay exec mpc_toggle
-bindsym --release XF86AudioNext exec mpc next
-bindsym --release XF86AudioPrev exec mpc prev
+bindsym --release XF86AudioStop exec playerctl stop
+bindsym --release XF86AudioPlay exec playerctl play-pause
+bindsym --release XF86AudioNext exec playerctl next
+bindsym --release XF86AudioPrev exec playerctl previous
 
 # GIGABYTE Aero 14 does not have media keys. Therefore we use alt+(arrow keys) to control media
-#bindsym Mod1+Down  exec playerctl play-pause
-#bindsym Mod1+Right exec playerctl next
-#bindsym Mod1+Left  exec playerctl previous
-#bindsym Mod1+Up    exec playerctl stop
+bindsym Mod1+Down  exec playerctl play-pause
+bindsym Mod1+Right exec playerctl next
+bindsym Mod1+Left  exec playerctl previous
+bindsym Mod1+Up    exec playerctl stop
 
-bindsym Mod1+Down  exec mpc_toggle
-bindsym Mod1+Right exec mpc next
-bindsym Mod1+Left  exec mpc prev
-bindsym Mod1+Up    exec mpc stop
+#bindsym Mod1+Down  exec mpc_toggle
+#bindsym Mod1+Right exec mpc next
+#bindsym Mod1+Left  exec mpc prev
+#bindsym Mod1+Up    exec mpc stop
 
 
 ##################################################
@@ -540,9 +540,10 @@ exec compton -b
 exec dropbox
 exec --no-startup-id lock -u $wall
 exec feh --bg-fill $wall
-exec redshift-gtk
+exec redshift-gtk -l 42.364711:-71.299299
 exec --no-startup-id xss-lock -- /usr/local/bin/i3blur
 #exec /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 exec --no-startup-id indicator-keylock
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id mpdas -d
+exec --no-startup-id pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1
