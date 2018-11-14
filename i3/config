@@ -540,7 +540,7 @@ exec compton -b
 exec dropbox
 exec --no-startup-id lock -u $wall
 exec wal -R
-exec feh --bg-fill $wal
+exec feh --bg-fill $wall
 exec redshift-gtk -l 42.364711:-71.299299
 exec --no-startup-id xss-lock -- /usr/local/bin/i3blur
 #exec /usr/lib/gnome-settings-daemon/gnome-settings-daemon
