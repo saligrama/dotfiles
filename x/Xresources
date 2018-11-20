@@ -1,51 +1,12 @@
-! special
-*.foreground:   #d5c4a1
-*.background:   #1d2021
-*.cursorColor:  #d5c4a1
-
-! black
-*.color0:       #1d2021
-*.color8:       #665c54
-
-! red
-*.color1:       #fb4934
-*.color9:       #fe8019
-
-! green
-*.color2:       #b8bb26
-*.color10:      #3c3836
-
-! yellow
-*.color3:       #fabd2f
-*.color11:      #504945
-
-! blue
-*.color4:       #83a598
-*.color12:      #bdae93
-
-! magenta
-*.color5:       #d3869b
-*.color13:      #ebdbb2
-
-! cyan
-*.color6:       #8ec07c
-*.color14:      #d65d0e
-
-! white
-*.color7:       #d5c4a1
-*.color15:      #fbf1c7
+#include "/home/asaligrama/.cache/wal/colors.Xresources"
 
 URxvt.scrollBar: false
-URxvt.font: xft:Fira Code:size=9
+URxvt.font: xft:Mononoki Nerd Font:size=9
 URxvt.internalBorder: 15
 
 ! Rofi
 rofi.color-enabled: true
-rofi.color-window: #1d2021, #83a598, #1d2021
-rofi.color-normal: argb:d01d2021, #d5c4a1, argb:d01d2021, #83a598, #1d2021
-rofi.color-active: argb:d01d2021, #83a598, argb:cf1d2021, #83a598, argb:cb1d2021
-rofi.color-urgent: argb:c61d2021, #83a598, argb:c91d2021, #83a598, argb:ce1d2021
-rofi.font:         Fira Code 13
+rofi.font:         Mononoki Nerd Font 13
 rofi.fullscreen:   false
 rofi.padding:      15
 !rofi.opacity:     85%
