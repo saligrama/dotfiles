@@ -18,9 +18,10 @@ module-margin-right = 2
 
 font-0 = Iosevka:size=15;3
 font-1 = icomoon:size=17;3
-font-2 = ionicons:size=18;3
-font-3 = FontAwesome:size=16;3
-font-4 = DejaVu Sans:size=16;3
+font-2 = Ionicons:size=18;3
+font-3 = Material Design Icons:size=17;3
+font-4 = FontAwesome:size=16;3
+font-5 = DejaVu Sans:size=16;3
 
 modules-center = spotify
 modules-right = wireless-network pulseaudio battery date
@@ -31,7 +32,7 @@ type = internal/date
 format = <date>
 date = %a %l:%M %p
 format-prefix-foreground = ${xrdb:color3}
-format-prefix = 
+format-prefix = 
 format-prefix-padding = 1
 
 [module/temperature]
@@ -63,16 +64,16 @@ format-discharging = <label-discharging>
 format-full = <label-full>
 time-format = %H:%M
 label-charging = %percentage%%
-format-charging-prefix = 
+format-charging-prefix = 
 format-charging-prefix-padding = 1
 format-charging-prefix-foreground = ${xrdb:color2}
 label-full = FULL
-format-full-prefix = 
+format-full-prefix = 
 format-full-prefix-padding = 1
 format-full-prefix-foreground = ${xrdb:color2}
 full-at = 96
 label-discharging = %percentage%%  (%time%)
-format-discharging-prefix = 
+format-discharging-prefix = 
 format-discharging-prefix-foreground = ${xrdb:color9}
 format-discharging-prefix-padding = 1
 
@@ -91,14 +92,14 @@ module-offset-y = 3
 ;ws-icon-4 = 5;
 ;ws-icon-5 = 6;
 
-ws-icon-default = 
+ws-icon-default = 
 
 label-focused = %icon%
 label-focused-foreground = ${xrdb:color9}
 
 label-focused-padding = 1
 
-label-unfocused = 
+label-unfocused = 
 label-unfocused-padding = 1
 label-unfocused-foreground = ${xrdb:foreground}
 
@@ -115,8 +116,8 @@ sink = bluez_sink.00_E0_4C_C8_37_91.a2dp_sink
 
 format-volume = <label-volume>
 format-muted = <label-muted>
-format-muted-prefix = 
-format-volume-prefix = 
+format-muted-prefix = 
+format-volume-prefix = 
 format-muted-prefix-padding = 1
 format-volume-prefix-padding = 1
 label-muted = %percentage%%
@@ -133,8 +134,8 @@ ping_interval = 10
 format-connected = <label-connected>
 label-connected = %essid%
 label-disconnected = Disconnected
-format-connected-prefix = 
-format-disconnected-prefix = 
+format-connected-prefix = 蠟
+format-disconnected-prefix = 浪
 format-connected-prefix-padding = 1
 format-disconnected-prefix-padding = 1
 format-connected-prefix-foreground = ${xrdb:color6}
