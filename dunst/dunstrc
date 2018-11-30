@@ -1,5 +1,5 @@
 [global]
-    font = "Mononoki Nerd Font 12"
+    font = "Iosevka 12"
     allow_markup = yes
     format = "<b>%s %p</b>\n%b"
     sort = yes
@@ -29,7 +29,7 @@
 
 [frame]
     width = 4
-    color = "#8abeb7"
+    color = "#2b92c8"
 
 [shortcuts]
     close = ctrl+space
@@ -38,18 +38,18 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#1d1f21"
-    foreground = "#c5c8c6"
+    background = "#202427"
+    foreground = "#798ba5"
     timeout = 6
 
 [urgency_normal]
-    background = "#1d1f21"
-    foreground = "#c5c8c6"
+    background = "#202427"
+    foreground = "#798ba5"
     timeout = 8
 
 [urgency_critical]
-    background = "#1d1f21"
-    foreground = "#c5c8c6"
+    background = "#202427"
+    foreground = "#798ba5"
     timeout = 10
 
 

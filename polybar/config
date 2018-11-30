@@ -16,7 +16,7 @@ padding-right = 1
 module-margin-left = 0
 module-margin-right = 2
 
-font-0 = Mononoki Nerd Font:size=15;3
+font-0 = Iosevka:size=15;3
 font-1 = icomoon:size=17;3
 font-2 = ionicons:size=18;3
 font-3 = FontAwesome:size=16;3

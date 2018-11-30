@@ -9,7 +9,7 @@
 
 ## Font for window titles. Will also be used by the bar unless a different font
 ## is used in the bar {} block below.
-font pango: Roboto 11
+font pango: Clear Sans 11
 
 ## This font is widely installed, provides lots of unicode glyphs, right-to-left
 ## text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -46,7 +46,7 @@ set_from_resource $base0E color14
 set_from_resource $base0F color15
 
 # wallpaper
-set $wall /home/asaligrama/Dropbox/wallpapers/norway-unsplash.jpg
+set $wall /home/asaligrama/Dropbox/wallpapers/snowscape-unsplash.jpg
 
 ####################################################################################################
 # Containers
@@ -423,8 +423,8 @@ bindsym XF86AudioMute exec amixer -q sset Master toggle
 #bindsym Alt+Shift+PgDn exec amixer -q sset 'Master' 5%-
 
 ## Sreen brightness controls
-bindsym XF86MonBrightnessUp exec sudo xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec sudo xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 ## Touchpad controls
 # bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
@@ -548,3 +548,4 @@ exec --no-startup-id indicator-keylock
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id mpdas -d
 exec --no-startup-id pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1
+exec sudo xinput set-prop 18 283 1 
