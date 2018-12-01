@@ -1,10 +1,10 @@
 #!/bin/bash
 pac=$(checkupdates | wc -l)
-aur=$(cower -u | wc -l)
+aur=$(yay -Qu | wc -l)
 
 check=$((pac + aur))
 if [[ "$check" != "0" ]]; then
-    echo "$pac %{F#dc322f}%{F-} $aur"
+    echo "$pac %{F#a2864b}%{F-} $aur"
 else
     echo ""
     exit

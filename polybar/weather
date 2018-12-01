@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 import sys, requests, json, re
+import pywal
+
+colors = pywal.colors.file('/home/asaligrama/.cache/wal/colors.json')['colors']
 
 f = open('/home/asaligrama/.weather', 'r')
 url = "https://api.darksky.net/forecast/" + f.readline().strip() + "/" + f.readline().strip()
@@ -11,32 +14,30 @@ data = json.loads(weather_json.content.decode())
 icon = ""
 iconname = data["currently"]["icon"]
 if (iconname.find("clear-day") > -1):
-    icon = ""
+    icon = ""
 elif (iconname.find("clear-night") > -1):
-    icon = ""
+    icon = ""
 elif (iconname.find("snow") > -1):
-    icon = ""
+    icon = ""
 elif (iconname.find("snow") > -1 or
       iconname.find("sleet") > -1 or
       iconname.find("rain") > -1):
-    icon = ""
+    icon = ""
 elif (iconname.find("cloud") > -1 or
       iconname.find("wind") > -1 or
       iconname.find("fog") > -1):
-    icon = ""
+    icon = ""
 
 temp = data["currently"]["temperature"]
 color = ""
 
 if (temp <= 45.0):
-    color = "#458588"
+    color = colors['color13']
 elif (temp > 45.0 and temp <= 60.0):
-    color = "#689d6a"
-elif (temp > 60.0 and temp <= 70.0):
-    color = "#98971a"
-elif (temp > 70.0 and temp <= 95.0):
-    color = "#d79921"
+    color = colors['color6']
+elif (temp > 60.0 and temp <= 80.0):
+    color = colors['color10']
 else:
-    color = "#cc241d"
+    color = colors['color1']
 
-print("%{F" + color + "}" + icon + " " + str(round(temp, 1)) + " °F%{F-}")
+print("%{F" + color + "}" + icon + " " + str(int(round(temp, 0))) + "°F")

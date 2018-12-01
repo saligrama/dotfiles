@@ -489,8 +489,8 @@ bindsym button2 kill
 # Borders
 ###########
 
-new_window pixel 2
-new_float pixel 3
+new_window pixel 1
+new_float pixel 2
 
 # hide_edge_borders both
 
@@ -526,10 +526,8 @@ new_float pixel 3
 ## https://github.com/Airblader/i3
 
 gaps inner 5
-gaps outer 5
+gaps outer 0
 
-smart_gaps on
-smart_borders on
 
 ####################################################################################################
 # Autostart
@@ -548,4 +546,4 @@ exec --no-startup-id indicator-keylock
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id mpdas -d
 exec --no-startup-id pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1
-exec sudo xinput set-prop 18 283 1 
+exec sudo xinput set-prop 18 283 1
