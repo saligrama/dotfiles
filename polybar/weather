@@ -7,9 +7,12 @@ colors = pywal.colors.file('/home/asaligrama/.cache/wal/colors.json')['colors']
 f = open('/home/asaligrama/.weather', 'r')
 url = "https://api.darksky.net/forecast/" + f.readline().strip() + "/" + f.readline().strip()
 
-weather_json = requests.get(url)
-weather_json.raise_for_status()
-data = json.loads(weather_json.content.decode())
+try:
+    weather_json = requests.get(url)
+    weather_json.raise_for_status()
+    data = json.loads(weather_json.content.decode())
+except:
+    exit()
 
 icon = ""
 iconname = data["currently"]["icon"]
