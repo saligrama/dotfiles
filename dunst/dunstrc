@@ -1,5 +1,5 @@
 [global]
-    font = "SF Mono 12"
+    font = "Iosevka 13"
     allow_markup = yes
     format = "<b>%s %p</b>\n%b"
     sort = yes
@@ -22,14 +22,14 @@
     # transparency = 10
     shrink = yes
     startup_notification = false
-    dmenu = "/usr/bin/dmenu -p dunst: -nb #FFFFFF -nf #000000 -sb #94DBFF -sf #000000"
+    dmenu = "/usr/bin/dmenu -p dunst: -nb #c5c8c6 -nf #000000 -sb #94DBFF -sf #000000"
     browser = /usr/bin/chromium
     icon_position = off
     icon_folders = /usr/share/icons/Flattr/16x16/status/:/usr/share/icons/Flattr/16x16/devices/
 
 [frame]
     width = 4
-    color = "#8c9abe"
+    color = "#81a2be"
 
 [shortcuts]
     close = ctrl+space
@@ -38,18 +38,18 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#1f252d"
-    foreground = "#a2a8ba"
+    background = "#1d1f21"
+    foreground = "#c5c8c6"
     timeout = 6
 
 [urgency_normal]
-    background = "#1f252d"
-    foreground = "#a2a8ba"
+    background = "#1d1f21"
+    foreground = "#c5c8c6"
     timeout = 8
 
 [urgency_critical]
-    background = "#1f252d"
-    foreground = "#a2a8ba"
+    background = "#1d1f21"
+    foreground = "#c5c8c6"
     timeout = 10
 
 
