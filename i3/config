@@ -46,7 +46,7 @@ set_from_resource $base0E color14
 set_from_resource $base0F color15
 
 # wallpaper
-set $wall /home/asaligrama/Dropbox/wallpapers/snow-cabins-unsplash.jpg
+set $wall /home/asaligrama/Dropbox/wallpapers/bettmerhorn-unsplash.jpg
 
 ####################################################################################################
 # Containers
