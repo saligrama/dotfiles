@@ -1,7 +1,7 @@
 #include "/home/asaligrama/.cache/wal/colors.Xresources"
 
 URxvt.scrollBar: false
-URxvt.font: xft:Hasklug:size=9
+URxvt.font: xft:Hasklig:size=9
 URxvt.internalBorder: 15
 
 ! Rofi
