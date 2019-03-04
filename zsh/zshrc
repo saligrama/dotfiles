@@ -56,7 +56,7 @@ plugins=(git zsh-syntax-highlighting colored-man-pages colorize bgnotify)
 
 # for ArchLinux only
 if [[ $(lsb_release -is) -eq "Arch" ]]; then
-  export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/asaligrama/.cargo/bin"
+  export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/asaligrama/.cargo/bin:/home/asaligrama/.local/bin"
 fi
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -91,6 +91,7 @@ export LC_ALL=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias q="exit"
+alias v="nvim"
 
 function ltx () {
   pdflatex $1 &&
