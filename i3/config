@@ -9,7 +9,7 @@
 
 ## Font for window titles. Will also be used by the bar unless a different font
 ## is used in the bar {} block below.
-font pango: Source Sans Pro 11
+font pango: Fira Sans 10
 
 ## This font is widely installed, provides lots of unicode glyphs, right-to-left
 ## text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -46,7 +46,7 @@ set_from_resource $base0E color14
 set_from_resource $base0F color15
 
 # wallpaper
-set $wall /home/asaligrama/Dropbox/wallpapers/vigo-di-fassa-unsplash.jpg
+set $wall /home/asaligrama/Dropbox/wallpapers/riomaggiore-unsplash.jpg
 
 ####################################################################################################
 # Containers
@@ -90,51 +90,6 @@ set $ws6 "6"
 ## http://i3wm.org/docs/userguide.html#command_criteria
 
 
-##################################################
-# Workspace assignments
-#########################
-
-## NOTE: the order is crucial here! (= opposite of for_window keyword)
-
-## title
-
-## instance (aka classname)
-assign [instance="^crx_bgkodfmeijboinjdegggmkbkjfiagaan$"] $ws3
-assign [instance="^crx_bikioccmkafdpakkkcpdbppfkghcmihk$"] $ws3
-assign [instance="^web.whatsapp.com$"] $ws3
-assign [instance="^m.facebook.com__messages$"] $ws3
-
-assign [instance="^Photoshop.exe$"] $ws6
-
-## class
-# assign [class="urxvt"] $ws2
-# assign [class="Nautilus"] $ws1
-
-assign [class="^chromium$"] $ws1
-assign [class="^Firefox$"] $ws1
-assign [class="^vivaldi-stable$"] $ws1
-
-assign [class="^Pidgin$"] $ws3
-assign [class="^TeamSpeak$"] $ws3
-assign [class="^Slack$"] $ws3
-assign [class="^Skype$"] $ws3
-
-assign [class="^jetbrains-idea-ce$"] $ws4
-assign [class="^Atom$"] $ws4
-assign [class="^Eclipse$"] $ws4
-assign [class="^MATLAB"] $ws4
-assign [class="^Subl3$"] $ws4
-
-assign [class="^libreoffice-"] $ws5
-assign [class="^TeXstudio$"] $ws5
-assign [class="^Wps$"] $ws5
-assign [class="^Wpp$"] $ws5
-assign [class="^Et$"] $ws5
-
-assign [class="^Clementine$"] $ws6
-assign [class="^Mixxx$"] $ws6
-assign [class="^Spotify$"] $ws6
-
 
 ##################################################
 # Automatic actions
@@ -151,22 +106,12 @@ for_window [window_role="^task_dialog$"] floating enable
 for_window [window_role="^buddy_list$"] move scratchpad
 
 ## class
-for_window [class="^TeamViewer$"] floating enable
-for_window [class="^rdesktop$"] floating disable
-for_window [class="^SWT$"] floating enable
 
 for_window [class="^Kodi$"] focus
 for_window [class="^Vlc$"] focus
 
-## instance (aka classname)
-for_window [instance="^web.whatsapp.com$"] floating disable
-for_window [instance="^m.facebook.com__messages$"] floating disable
-for_window [instance="^hypem.com__popular$"] floating disable
-for_window [instance="^soundcloud.com__stream$"] floating disable
-
 ## title
 for_window [title="Preferences$"] floating enable
-for_window [title="^Conversations with"] floating disable
 
 
 ####################################################################################################
@@ -194,8 +139,7 @@ set $mod Mod4
 ############
 
 set $terminal kitty
-set $browser /usr/bin/chromium
-set $ror $HOME/.config/i3/bin/run-or-raise.sh
+set $browser /usr/bin/firefox-developer-edition
 
 
 ##################################################
@@ -249,7 +193,6 @@ bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 
-bindsym $mod+a exec atom
 #bindsym --release $mod+b exec xset dpms force off
 bindsym $mod+c exec $browser
 bindsym $mod+d exec rofi -show drun
@@ -260,7 +203,7 @@ bindsym $mod+h split h
 # bindsym $mod+i
 # bindsym $mod+j
 bindsym $mod+l exec i3blur
-bindsym $mod+m exec geary
+bindsym $mod+m exec mailspring
 # bindsym $mod+o
 #bindsym $mod+p exec POL_IgnoreWineErrors=True playonlinux --run Photoshop
 bindsym $mod+q kill
