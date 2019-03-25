@@ -1,5 +1,5 @@
 [global]
-    font = "Fira Code 13"
+    font = "Iosevka SS03 14"
     allow_markup = yes
     format = "<b>%s %p</b>\n%b"
     sort = yes
@@ -22,14 +22,14 @@
     # transparency = 10
     shrink = yes
     startup_notification = false
-    dmenu = "/usr/bin/dmenu -p dunst: -nb #d5c4a1 -nf #000000 -sb #94DBFF -sf #000000"
+    dmenu = "/usr/bin/dmenu -p dunst: -nb #8E8F8D -nf #000000 -sb #94DBFF -sf #000000"
     browser = /usr/bin/chromium
     icon_position = off
     icon_folders = /usr/share/icons/Flattr/16x16/status/:/usr/share/icons/Flattr/16x16/devices/
 
 [frame]
     width = 4
-    color = "#83a598"
+    color = "#6B8ED6"
 
 [shortcuts]
     close = ctrl+space
@@ -38,18 +38,18 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#1d2021"
-    foreground = "#d5c4a1"
+    background = "#322622"
+    foreground = "#8E8F8D"
     timeout = 6
 
 [urgency_normal]
-    background = "#1d2021"
-    foreground = "#d5c4a1"
+    background = "#322622"
+    foreground = "#8E8F8D"
     timeout = 8
 
 [urgency_critical]
-    background = "#1d2021"
-    foreground = "#d5c4a1"
+    background = "#322622"
+    foreground = "#8E8F8D"
     timeout = 10
 
 
