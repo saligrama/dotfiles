@@ -9,7 +9,7 @@
 
 ## Font for window titles. Will also be used by the bar unless a different font
 ## is used in the bar {} block below.
-font pango: Fira Sans 10
+font pango: Clear Sans 10
 
 ## This font is widely installed, provides lots of unicode glyphs, right-to-left
 ## text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -46,7 +46,7 @@ set_from_resource $base0E color14
 set_from_resource $base0F color15
 
 # wallpaper
-set $wall /home/asaligrama/Dropbox/wallpapers/riomaggiore-unsplash.jpg
+set $wall /home/asaligrama/Dropbox/wallpapers/plant-blur-unsplash.jpg
 
 ####################################################################################################
 # Containers
@@ -478,6 +478,7 @@ gaps outer 0
 
 exec xrandr --dpi 160
 exec compton -b
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec dropbox
 exec --no-startup-id lock -u $wall
 exec wal -R
@@ -486,7 +487,5 @@ exec redshift-gtk -l 42.364711:-71.299299
 exec --no-startup-id xss-lock -- /usr/local/bin/i3blur
 #exec /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 exec --no-startup-id indicator-keylock
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id mpdas -d
 exec --no-startup-id pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1
 exec sudo xinput set-prop 18 283 1
