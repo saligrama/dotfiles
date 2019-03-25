@@ -1,12 +1,12 @@
 #include "/home/asaligrama/.cache/wal/colors.Xresources"
 
 URxvt.scrollBar: false
-URxvt.font: xft:Fira Code:size=9
+URxvt.font: xft:Iosevka SS03:size=10
 URxvt.internalBorder: 15
 
 ! Rofi
 rofi.color-enabled: true
-rofi.font:         Fira Code 13
+rofi.font:         Iosevka SS03 14
 rofi.fullscreen:   false
 rofi.padding:      15
 !rofi.opacity:     85%
