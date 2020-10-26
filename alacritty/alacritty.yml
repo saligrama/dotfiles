@@ -1,0 +1,21 @@
+window:
+  padding:
+    x: 20
+    y: 20
+
+font:
+  size: 12
+  normal:
+    family: Iosevka Saligrama Extended
+    style: Regular
+
+  bold:
+    family: Iosevka Saligrama Extended
+    style: Bold
+
+  italic:
+    family: Iosevka Saligrama Extended
+    style: Italic
+
+env:
+  WINIT_X11_SCALE_FACTOR: "1"

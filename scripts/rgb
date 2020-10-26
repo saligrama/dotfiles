@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Corsair H100i cooler
+liquidctl -d 1 set led color fixed ff0052
+
+#liquidctl -d 1 set led color super-fixed $(gen-colors)
+
+# Corsair Vengeance RAM 0
+openrgb -d 0 -m direct -c 00f3ff
+
+# Corsair Vengeance RAM 1
+openrgb -d 1 -m direct -c 00f3ff
+
+# ASUS Aura Motherboard
+#openrgb -d 2 -m Off
+
+# NZXT fans
+openrgb -d 3 -m Static -c 5c2686

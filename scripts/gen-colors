@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+
+import random
+
+colors = []
+colors.append(random.randint(0, 0x777777))
+
+for i in range(23):
+    colors.append(random.randint(0, 0x777777))
+
+for i in colors:
+    print('{:06x}'.format(i), end=' ')
+
+print()

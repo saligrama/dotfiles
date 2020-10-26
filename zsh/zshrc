@@ -56,7 +56,7 @@ plugins=(git zsh-syntax-highlighting colored-man-pages colorize bgnotify)
 
 # for ArchLinux only
 if [[ $(lsb_release -is) -eq "Arch" ]]; then
-  export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/asaligrama/.cargo/bin:/home/asaligrama/.local/bin"
+  export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/asaligrama/.cargo/bin:/home/asaligrama/.local/bin:/opt/intel/vtune_profiler_2020.3.0.612611/bin64"
 fi
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -98,9 +98,9 @@ function ltx () {
   evince ${1%.*}.pdf
 }
 
-. ~/z.sh
+(cat ~/.cache/wal/sequences &)
 
-export EDITOR="nvim"
+export TERM=xterm-256color
 
 export RUST_BACKTRACE="1"
 
