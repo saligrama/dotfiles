@@ -8,3 +8,4 @@ while pgrep -x polybar >/dev/null; do sleep 1; done
 
 # Launch bars
 polybar -c ~/.config/polybar/config bar &
+polybar -c ~/.config/polybar/config secondary &
