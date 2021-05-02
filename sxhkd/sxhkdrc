@@ -1,0 +1,11 @@
+~button2
+    "/home/asaligrama/.config/sxhkd/autoscroll.sh"
+@button2
+
+~control + c
+    echo -n | xsel -n -i
+~control + shift + c
+    echo -n | xsel -n -i
+~control + x
+    echo -n | xsel -n -i
+
