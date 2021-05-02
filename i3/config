@@ -46,7 +46,7 @@ set_from_resource $base0E color14
 set_from_resource $base0F color15
 
 # wallpaper
-set $wall /home/asaligrama/Pictures/latemar-unsplash.jpg
+set $wall /home/asaligrama/Pictures/skopje-unsplash.jpg
 
 ####################################################################################################
 # Containers
@@ -54,7 +54,7 @@ set $wall /home/asaligrama/Pictures/latemar-unsplash.jpg
 
 ## class						border		bg			text    	indicator	child_border
 client.focused				$base00 	$base04 	$base00 	$base00
-client.focused_inactive		$base06 	$base06 	$base03 	$base00
+client.focused_inactive		$base06 	$base07 	$base00 	$base00
 client.unfocused			$base00 	$base00 	$base07 	$base00
 client.urgent_workspace		$base06 	$base08 	$base07 	$base08
 #client.placeholder
@@ -150,7 +150,7 @@ set $mod Mod4
 # Commands
 ############
 
-set $terminal alacritty
+set $terminal kitty
 set $browser /usr/bin/firefox-developer-edition
 
 
@@ -497,6 +497,8 @@ gaps outer 10
 exec picom -b
 exec sudo /usr/local/bin/rgb
 exec $HOME/.config/polybar/launch.sh
+exec $HOME/.config/sxhkd/launch.sh
+exec_always $HOME/.config/i3/discord_clear.py
 exec wal -R
 exec feh --bg-fill $wall
 #exec feh --bg-scale --no-xinerama $wall

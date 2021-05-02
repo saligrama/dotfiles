@@ -1,5 +1,5 @@
 [global]
-    font = "Iosevka SS03 14"
+    font = "SF Mono Ligatures 14"
     allow_markup = yes
     format = "<b>%s %p</b>\n%b"
     sort = yes
@@ -22,14 +22,14 @@
     # transparency = 10
     shrink = yes
     startup_notification = false
-    dmenu = "/usr/bin/dmenu -p dunst: -nb #8E8F8D -nf #000000 -sb #94DBFF -sf #000000"
-    browser = /usr/bin/chromium
+    dmenu = "/usr/bin/dmenu -p dunst: -nb #E3E6EE -nf #000000 -sb #94DBFF -sf #000000"
+    browser = /usr/bin/firefox-developer-edition
     icon_position = off
     icon_folders = /usr/share/icons/Flattr/16x16/status/:/usr/share/icons/Flattr/16x16/devices/
 
 [frame]
     width = 4
-    color = "#6B8ED6"
+    color = "#26BBD9"
 
 [shortcuts]
     close = ctrl+space
@@ -38,18 +38,18 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#322622"
-    foreground = "#8E8F8D"
+    background = "#1C1E26"
+    foreground = "#E3E6EE"
     timeout = 6
 
 [urgency_normal]
-    background = "#322622"
-    foreground = "#8E8F8D"
+    background = "#1C1E26"
+    foreground = "#E3E6EE"
     timeout = 8
 
 [urgency_critical]
-    background = "#322622"
-    foreground = "#8E8F8D"
+    background = "#1C1E26"
+    foreground = "#E3E6EE"
     timeout = 10
 
 
@@ -106,3 +106,8 @@
 #    urgency = normal
 #
 # vim: ft=cfg
+
+[discord]
+appname = discord
+format = ""
+script = /home/asaligrama/.config/dunst/increment.sh

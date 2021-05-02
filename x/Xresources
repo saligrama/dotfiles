@@ -1,12 +1,12 @@
 #include "/home/asaligrama/.cache/wal/colors.Xresources"
 
 URxvt.scrollBar: false
-URxvt.font: xft:Iosevka SS03:size=10
+URxvt.font: xft:SF Mono:style=Extended:size=11
 URxvt.internalBorder: 15
 
 ! Rofi
 rofi.color-enabled: true
-rofi.font:         Iosevka Saligrama Expanded 19
+rofi.font:         SF Mono 19
 rofi.fullscreen:   false
 rofi.padding:      15
 !rofi.opacity:     85%

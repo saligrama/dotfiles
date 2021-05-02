@@ -17,19 +17,19 @@ except:
 icon = ""
 iconname = data["currently"]["icon"]
 if (iconname.find("clear-day") > -1):
-    icon = ""
+    icon = ""
 elif (iconname.find("clear-night") > -1):
-    icon = ""
+    icon = ""
 elif (iconname.find("snow") > -1):
-    icon = ""
+    icon = ""
 elif (iconname.find("snow") > -1 or
       iconname.find("sleet") > -1 or
       iconname.find("rain") > -1):
-    icon = ""
+    icon = ""
 elif (iconname.find("cloud") > -1 or
       iconname.find("wind") > -1 or
       iconname.find("fog") > -1):
-    icon = ""
+    icon = ""
 
 temp = data["currently"]["temperature"]
 color = ""
