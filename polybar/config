@@ -7,7 +7,7 @@ border-top-size = 5
 border-bottom-size = 5
 border-color = #00000000
 clickareas = 35
-monitor = DP1
+monitor = DP-4
 fixed-center = true
 
 background = #00000000
@@ -45,7 +45,7 @@ border-top-size = 5
 border-bottom-size = 5
 border-color = #00000000
 clickareas = 35
-monitor = HDMI2
+monitor = HDMI-0
 fixed-center = true
 
 background = #00000000
