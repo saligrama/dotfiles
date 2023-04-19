@@ -1,11 +1,13 @@
 #!/bin/bash
-pac=$(checkupdates | wc -l)
-aur=$(yay -Qua | wc -l)
+all=$(yay -Qqu | wc -l)
+#aur="0"
 
-check=$((pac + aur))
-if [[ "$check" != "0" ]]; then
-    #echo "$pac %{F#FAB795}%{F-} $aur"
-    echo "$pac %{F#FAB795}%{F-} $aur"
+source "$HOME/.cache/wal/colors.sh"
+
+if [[ "$all" != "0" ]]; then
+    aur=$(yay -Qqua | wc -l)
+    pac=$((all - aur))
+    echo "%{B$color9} $pac  $aur "
 else
     echo ""
     exit
